@@ -1,5 +1,5 @@
 import express from "express";
-import { CommentRoutes, CountryRoutes, FavoriteRoutes, GenreRoutes, MovieRoutes, RatingRoutes, UserRoutes, } from "./routes";
+import { CommentRoutes, CountryRoutes, FavoriteRoutes, GenreRoutes, MovieRoutes, RatingRoutes, UserRoutes, } from "./routes/index.js";
 import bodyParser from "body-parser";
 const app = express();
 const port = 3000;

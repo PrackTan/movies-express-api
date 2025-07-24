@@ -7,7 +7,7 @@ import {
   MovieRoutes,
   RatingRoutes,
   UserRoutes,
-} from "./routes";
+} from "./routes/index.js"
 
 import bodyParser from "body-parser";
 const app: Express = express();
