@@ -5,7 +5,7 @@ import { TABLE_NAME } from "../utils";
 
 const CommentModel = connection.define<Comment>(TABLE_NAME.COMMENTS, {
   id: {
-    type: DataTypes.INTEGER.UNSIGNED,
+    type: DataTypes.INTEGER,
     autoIncrement: true,
     primaryKey: true,
   },

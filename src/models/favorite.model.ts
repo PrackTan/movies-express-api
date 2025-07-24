@@ -5,7 +5,7 @@ import { TABLE_NAME } from "../utils";
 
 const FavoriteModel = connection.define<Favorite>(TABLE_NAME.FAVORITES, {
   id: {
-    type: DataTypes.INTEGER.UNSIGNED,
+    type: DataTypes.INTEGER,
     autoIncrement: true,
     primaryKey: true,
   },

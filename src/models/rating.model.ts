@@ -5,7 +5,7 @@ import { TABLE_NAME } from "../utils";
 
 const RatingModel = connection.define<Rating>(TABLE_NAME.RATINGS, {
   id: {
-    type: DataTypes.INTEGER.UNSIGNED,
+    type: DataTypes.INTEGER,
     autoIncrement: true,
     primaryKey: true,
   },

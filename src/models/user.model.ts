@@ -5,7 +5,7 @@ import {TABLE_NAME} from "../utils";
 
 const UserModel = connection.define<User>(TABLE_NAME.USERS, {
     id: {
-        type: DataTypes.INTEGER.UNSIGNED,
+        type: DataTypes.INTEGER,
         autoIncrement: true,
         primaryKey: true,
     },

@@ -5,7 +5,7 @@ import { TABLE_NAME } from "../utils";
 
 const MovieModel = connection.define<Movie>(TABLE_NAME.MOVIES, {
   id: {
-    type: DataTypes.INTEGER.UNSIGNED,
+    type: DataTypes.INTEGER,
     autoIncrement: true,
     primaryKey: true,
   },
@@ -41,11 +41,11 @@ const MovieModel = connection.define<Movie>(TABLE_NAME.MOVIES, {
     allowNull: false,
   },
   posterHorizontal: {
-    type: DataTypes.TEXT("long"),
+    type: DataTypes.TEXT,
     allowNull: false,
   },
   posterVertical: {
-    type: DataTypes.TEXT("long"),
+    type: DataTypes.TEXT,
     allowNull: false,
   },
   country: {

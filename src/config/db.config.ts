@@ -2,9 +2,9 @@ import { Sequelize } from "sequelize";
 
 const connection = new Sequelize({
   host: "localhost",
-  dialect: "mysql",
-  username: "root",
-  password: "",
+  dialect: "postgres",
+  username: "postgres", // Đổi lại user nếu cần
+  password: "", // Đổi lại password nếu cần
   database: "real_film",
   logging: false,
 });
