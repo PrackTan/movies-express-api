@@ -9,7 +9,7 @@ import {
   UserRoutes,
 } from "./routes";
 
-const bodyParser = require("body-parser");
+import bodyParser from "body-parser";
 const app: Express = express();
 const port = 3000;
 
