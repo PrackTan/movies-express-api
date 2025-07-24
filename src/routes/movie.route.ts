@@ -2,7 +2,6 @@ import { Router } from "express";
 import { MovieController } from "../controllers";
 import { authenticateToken, validateRequestSchema } from "../middleware";
 import { createMovieSchema, updateMovieSchema } from "../schema";
-const multer = require("multer");
 
 const router = Router();
 
