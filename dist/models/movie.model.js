@@ -5,7 +5,7 @@ const config_1 = require("../config");
 const utils_1 = require("../utils");
 const MovieModel = config_1.connection.define(utils_1.TABLE_NAME.MOVIES, {
     id: {
-        type: sequelize_1.DataTypes.INTEGER.UNSIGNED,
+        type: sequelize_1.DataTypes.INTEGER,
         autoIncrement: true,
         primaryKey: true,
     },
@@ -41,11 +41,11 @@ const MovieModel = config_1.connection.define(utils_1.TABLE_NAME.MOVIES, {
         allowNull: false,
     },
     posterHorizontal: {
-        type: sequelize_1.DataTypes.TEXT("long"),
+        type: sequelize_1.DataTypes.TEXT,
         allowNull: false,
     },
     posterVertical: {
-        type: sequelize_1.DataTypes.TEXT("long"),
+        type: sequelize_1.DataTypes.TEXT,
         allowNull: false,
     },
     country: {

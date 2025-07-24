@@ -5,20 +5,19 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const routes_1 = require("./routes");
-const bodyParser = require("body-parser");
+const body_parser_1 = __importDefault(require("body-parser"));
 const app = (0, express_1.default)();
 const port = 3000;
 const apiVersion = "1";
 const apiRoutes = `/api/v${apiVersion}`;
 // parse application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({
+app.use(body_parser_1.default.urlencoded({
     limit: "50mb",
     extended: true,
     parameterLimit: 50000,
 }));
 // parse application/json
-app.use(bodyParser.json({
-    extended: true,
+app.use(body_parser_1.default.json({
     limit: "50mb",
 }));
 app.get("/", (req, res) => {

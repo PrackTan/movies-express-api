@@ -28,7 +28,6 @@ app.use(
 // parse application/json
 app.use(
   bodyParser.json({
-    extended: true,
     limit: "50mb",
   })
 );

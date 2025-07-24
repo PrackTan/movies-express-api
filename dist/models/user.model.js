@@ -5,7 +5,7 @@ const config_1 = require("../config");
 const utils_1 = require("../utils");
 const UserModel = config_1.connection.define(utils_1.TABLE_NAME.USERS, {
     id: {
-        type: sequelize_1.DataTypes.INTEGER.UNSIGNED,
+        type: sequelize_1.DataTypes.INTEGER,
         autoIncrement: true,
         primaryKey: true,
     },

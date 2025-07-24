@@ -3,8 +3,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const sequelize_1 = require("sequelize");
 const connection = new sequelize_1.Sequelize({
     host: "localhost",
-    dialect: "mysql",
-    username: "root",
+    dialect: "postgres",
+    username: "postgres",
     password: "",
     database: "real_film",
     logging: false,
