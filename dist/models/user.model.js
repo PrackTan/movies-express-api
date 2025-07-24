@@ -1,0 +1,44 @@
+import { DataTypes } from "sequelize";
+import { connection } from "../config";
+import { TABLE_NAME } from "../utils";
+const UserModel = connection.define(TABLE_NAME.USERS, {
+    id: {
+        type: DataTypes.INTEGER,
+        autoIncrement: true,
+        primaryKey: true,
+    },
+    name: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
+    email: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
+    birthday: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
+    password: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
+    photoURL: {
+        type: DataTypes.STRING,
+        allowNull: true,
+    },
+    isAdmin: {
+        type: DataTypes.BOOLEAN,
+        defaultValue: false,
+        allowNull: true,
+    },
+    otp: {
+        type: DataTypes.STRING,
+        allowNull: true,
+    },
+    otpExpiry: {
+        type: DataTypes.DATE,
+        allowNull: true,
+    },
+});
+export default UserModel;
