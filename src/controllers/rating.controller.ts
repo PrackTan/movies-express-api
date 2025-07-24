@@ -36,7 +36,7 @@ const getRatingByMovie: RequestHandler<
       status: "Success",
       data: rating as any,
     });
-  } catch (error) {
+  } catch (error: any) {
     next(error);
   }
 };
@@ -110,7 +110,7 @@ const rateMovie: RequestHandler<
       status: "Success",
       data: ratingRecord,
     });
-  } catch (error) {
+  } catch (error: any) {
     next(error);
   }
 };

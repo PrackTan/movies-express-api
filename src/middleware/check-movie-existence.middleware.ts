@@ -7,7 +7,7 @@ const checkMovieExistence = async (movieId: number) => {
       throw new Error("Movie not found");
     }
     return movie;
-  } catch (error) {
+  } catch (error: any) {
     throw error;
   }
 };

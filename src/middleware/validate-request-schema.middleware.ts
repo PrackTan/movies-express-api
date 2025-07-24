@@ -9,7 +9,7 @@ const validateRequestSchema =
     try {
       await schema.validate(req);
       next();
-    } catch (error) {
+    } catch (error: any) {
       if (error instanceof ValidationError) {
         return sendResponse(res, {
           code: 400,

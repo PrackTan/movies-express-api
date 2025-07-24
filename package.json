@@ -2,9 +2,10 @@
   "name": "movies-rest-api",
   "version": "1.0.0",
   "description": "",
+  "type": "module",
   "main": "./src/server.ts",
   "scripts": {
-    "start": "ts-node-dev src/server.ts"
+    "start": "ts-node-dev --respawn --transpile-only src/server.ts"
   },
   "keywords": [],
   "author": "",

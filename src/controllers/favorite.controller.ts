@@ -9,7 +9,7 @@ const getFavoritesByUserId: RequestHandler<
   ResponseResult<Array<Favorite> | undefined>,
   unknown,
   unknown
-> = async (req, res, next) => {
+> = async (req:any, res:any, next:any)   => {
   try {
     const favorites = await FavoriteModel.findAll({
       where: {
@@ -32,7 +32,7 @@ const createFavorite: RequestHandler<
   ResponseResult<Favorite | undefined>,
   unknown,
   unknown
-> = async (req, res, next) => {
+> = async (req:any, res:any, next:any) => {
   try {
     const { movieId } = req.params;
     const userId = req.user.id;
@@ -80,7 +80,7 @@ const deleteFavorite: RequestHandler<
   ResponseResult<undefined>,
   unknown,
   unknown
-> = async (req, res, next) => {
+> = async (req:any, res:any, next:any) => {
   try {
     const { movieId } = req.params;
 

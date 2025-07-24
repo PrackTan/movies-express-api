@@ -17,7 +17,7 @@ const createMovie: RequestHandler<
   ResponseResult<Movie | undefined>,
   CreateMovieBody,
   unknown
-> = (req, res, next) => {
+> = (req: any, res: any, next: any) => {
   try {
     const {
       title,
@@ -65,9 +65,9 @@ const createMovie: RequestHandler<
 };
 
 const updateMovie: RequestHandler<any, unknown, any, unknown> = async (
-  req,
-  res,
-  next
+  req: any,
+  res: any,
+  next: any
 ) => {
   try {
     const {
@@ -178,7 +178,7 @@ const getMovieById = async (
     });
 
     const sumRatings = ratings
-      ? ratings.reduce((total, e) => total + e.rating, 0)
+      ? ratings.reduce((total:any, e:any) => total + e.rating, 0)
       : 0;
 
     const numberOfReviews = ratings ? ratings.length : 0;
@@ -190,9 +190,9 @@ const getMovieById = async (
 
     const newGenre = movie.genre
       .split(", ")
-      .map((id) => genreData.find((genre) => genre.code === id))
+      .map((id:any) => genreData.find((genre:any) => genre.code === id))
       .filter(Boolean)
-      .map((genre) => genre?.name)
+      .map((genre:any) => genre?.name)
       .join(", ");
 
     const newCountry = countryData.find((e) => e.code === movie?.country)?.name;
@@ -273,7 +273,7 @@ const getLatestMovies: RequestHandler<
   unknown,
   unknown,
   unknown
-> = async (req, res, next) => {
+> = async (req: any, res: any, next: any) => {
   try {
     const movies = await MovieModel.findAll({
       order: [["releaseYear", "DESC"]],
@@ -290,9 +290,9 @@ const getLatestMovies: RequestHandler<
 };
 
 const getMoviesByGenre: RequestHandler<any, unknown, unknown, unknown> = async (
-  req,
-  res,
-  next
+  req: any,
+  res: any,
+  next: any
 ) => {
   try {
     const { genreId } = req.params;
@@ -320,7 +320,7 @@ const getMoviesByCountry: RequestHandler<
   unknown,
   unknown,
   unknown
-> = async (req, res, next) => {
+> = async (req: any, res: any, next: any) => {
   try {
     const { countryId } = req.params;
 
@@ -341,9 +341,9 @@ const getMoviesByCountry: RequestHandler<
 };
 
 const getFavoriteMovies: RequestHandler<any, any, any, any> = async (
-  req,
-  res,
-  next
+  req: any,
+  res: any,
+  next: any
 ) => {
   try {
     const userId = req.user.id;
@@ -368,9 +368,9 @@ const getFavoriteMovies: RequestHandler<any, any, any, any> = async (
 };
 
 const getCommentedMovies: RequestHandler<any, any, any, any> = async (
-  req,
-  res,
-  next
+  req: any,
+  res: any,
+  next: any
 ) => {
   try {
     const userId = req.user.id;
@@ -395,9 +395,9 @@ const getCommentedMovies: RequestHandler<any, any, any, any> = async (
 };
 
 const getRatedMovies: RequestHandler<any, any, any, any> = async (
-  req,
-  res,
-  next
+  req: any,
+  res: any,
+  next: any
 ) => {
   try {
     const userId = req.user.id;

@@ -14,7 +14,7 @@ const getCountries = (
       message: "",
       data: countryData,
     });
-  } catch (error) {}
+  } catch (error: any) {}
 };
 
 const CountryController = {

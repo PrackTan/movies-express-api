@@ -17,7 +17,7 @@ const getCommentById: RequestHandler<
   ResponseResult<Comment | undefined>,
   unknown,
   unknown
-> = async (req, res, next) => {
+> = async (req:any, res:any, next:any) => {
   try {
     const { commentId } = req.params;
 
@@ -43,7 +43,7 @@ const getCommentsByMovie: RequestHandler<
   ResponseResult<Array<Comment> | undefined>,
   unknown,
   unknown
-> = async (req, res, next) => {
+> = async (req:any, res:any, next:any) => {
   try {
     const { movieId } = req.params;
 
@@ -74,7 +74,7 @@ const getCommentsByUserId: RequestHandler<
   ResponseResult<Array<Comment> | undefined>,
   unknown,
   unknown
-> = async (req, res, next) => {
+> = async (req:any, res:any, next:any) => {
   try {
     const comments = await CommentModel.findAll({
       where: {
@@ -97,7 +97,7 @@ const createComment: RequestHandler<
   ResponseResult<Comment | undefined>,
   CreateCommentBody,
   unknown
-> = async (req, res, next) => {
+> = async (req:any, res:any, next:any) => {
   try {
     const { movieId } = req.params;
     const { comment } = req.body;
@@ -131,7 +131,7 @@ const updateComment: RequestHandler<
   ResponseResult<undefined>,
   UpdateCommentBody,
   unknown
-> = async (req, res, next) => {
+> = async (req:any, res:any, next:any) => {
   try {
     const { commentId } = req.params;
     const { comment } = req.body;
@@ -159,7 +159,7 @@ const deleteComment: RequestHandler<
   ResponseResult<undefined>,
   unknown,
   unknown
-> = async (req, res, next) => {
+> = async (req:any, res:any, next:any) => {
   try {
     const { commentId } = req.params;
 
